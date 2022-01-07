@@ -52,6 +52,28 @@ def ListarDivida():
     # re = json.dumps(myresult)
     return jsonify(myresult)
 
+@app.route("/divida/editar")
+def EditarDivida():
+
+    data = request.json
+
+    dividaId = data['DividaId']
+    produto = data['Produto']
+    dataVencimento = data['DataVencimento']
+    valor = data['Valor']
+
+    sql = '''UPDATE Divida 
+    SET Produto = %s, DataVencimento = %s, Valor = %s, DataAtualizacao = %s
+    WHERE DividaId = %s
+    '''
+    val = (produto, dataVencimento, valor, date.today(), dividaId )
+
+    cursor.execute(sql, val)
+
+    cnx.commit()
+
+    return "Editado"
+
 def VerificaUsuario(id):
 
     cursor.execute("SELECT * FROM Usuario WHERE UsuarioId = " + str(id))
