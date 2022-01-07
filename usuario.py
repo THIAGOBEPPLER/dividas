@@ -8,16 +8,16 @@ import json
 # def home():
 #     return "home"
 
-@app.route("/teste")
-def teste():
+@app.route("/usuario/teste")
+def testeUsuario():
     # teste = json.dumps(myresult)
 
     #return json.dumps(myresult)
 
     return str(date.today())
 
-@app.route("/cadastrar")
-def Cadastrar():
+@app.route("/usuario/cadastrar")
+def CadastrarUsuario():
 
     # teste = request.args.get('teste')
 
@@ -46,8 +46,8 @@ def Cadastrar():
 
     # return jsonify(data)
 
-@app.route("/editar")
-def Editar():
+@app.route("/usuario/editar")
+def EditarUsuario():
 
     data = request.json
 
@@ -72,8 +72,8 @@ def Editar():
 
     return "Editado"
 
-@app.route("/listar")
-def Listar():
+@app.route("/usuario/listar")
+def ListarUsuario():
 
     cursor.execute("SELECT * FROM Usuario")
     myresult = cursor.fetchall()
@@ -84,8 +84,8 @@ def Listar():
     # re = json.dumps(myresult)
     return jsonify(myresult)
 
-@app.route("/excluir")
-def Excluir():
+@app.route("/usuario/excluir")
+def ExcluirUsuario():
 
     data = request.json
 
