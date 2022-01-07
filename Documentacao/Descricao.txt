@@ -1,0 +1,54 @@
+Bibliotecas Utilizadas e como instalar:
+    Flask
+        $ python3 -m venv venv
+        $ . venv/bin/activate
+        $ pip install Flask
+    mysql.connector
+        $ pip install mysql-connector-python
+
+    Obs: Escolhi essas bibliotecas, pois foram as que achei maior 
+    documentação na internet. Caso na empresa sejam utilizadas outras 
+    bibliotecas, estou disposto a aprender. Lembrando que a minha principal 
+    linguagem é C#, tive algumas dificuldades no teste, mas gostei bastante do 
+    desafio.
+
+Como rodar:
+    Depois de instalar as Bibliotecas
+    Rodar os essas linhas no terminal
+        $ FLASK_APP=main
+        $ flask run
+
+Rotas executadas:
+    CRUD Usuario
+        Listar
+            http://127.0.0.1:5000/usuario/listar
+        Cadastrar
+            http://127.0.0.1:5000/usuario/cadastrar
+        Editar
+            http://127.0.0.1:5000/usuario/editar
+        Excluir
+            http://127.0.0.1:5000/usuario/excluir
+    CRUD Divida
+        Listar
+            http://127.0.0.1:5000/divida/listar
+        Cadastrar
+            http://127.0.0.1:5000/divida/cadastrar
+        Editar
+            http://127.0.0.1:5000/divida/editar
+        Excluir
+            http://127.0.0.1:5000/divida/excluir
+
+Melhorias a serem feitas
+    Implementar Extras (JWT)
+    Organizar em models
+    Organizar os metodos (Post, Delete)
+    Delete passando o ID via header
+    Listagem passando um objeto, não uma lista simples
+    Melhorar validações no geral
+
+    Obs: Todas essas melhorias, tenho facilidades de fazer em C#,
+    mas por causa do tempo curto e do meu trabalho, acabei deixando 
+    para fazer posteriormente, tentando entregar crud como preferência.
+    
+
+        
