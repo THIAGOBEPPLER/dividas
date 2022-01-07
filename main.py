@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 import divida
 import usuario
+import autenticacao
 
 @app.route("/c")
 def home():

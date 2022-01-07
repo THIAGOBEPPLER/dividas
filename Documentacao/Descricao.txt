@@ -5,6 +5,8 @@ Bibliotecas Utilizadas e como instalar:
         $ pip install Flask
     mysql.connector
         $ pip install mysql-connector-python
+    pyjwt
+        $ pip install pyjwt[crypto]
 
     Obs: Escolhi essas bibliotecas, pois foram as que achei maior 
     documentação na internet. Caso na empresa sejam utilizadas outras 
@@ -37,6 +39,8 @@ Rotas executadas:
             http://127.0.0.1:5000/divida/editar
         Excluir
             http://127.0.0.1:5000/divida/excluir
+    Autenticacao
+        http://127.0.0.1:5000/autenticacao
 
 Melhorias a serem feitas
     Implementar Extras (JWT)
