@@ -74,6 +74,23 @@ def EditarDivida():
 
     return "Editado"
 
+
+@app.route("/divida/excluir")
+def ExcluirDivida():
+
+    data = request.json
+
+    dividaId = data['DividaId']
+
+    sql = "DELETE FROM Divida WHERE DividaId = " + str(dividaId)
+    #val = (usuarioId)
+
+    cursor.execute(sql)
+
+    cnx.commit()
+
+    return "Excluido"
+
 def VerificaUsuario(id):
 
     cursor.execute("SELECT * FROM Usuario WHERE UsuarioId = " + str(id))
