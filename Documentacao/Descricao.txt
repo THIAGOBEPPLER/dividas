@@ -43,7 +43,7 @@ Rotas executadas:
         http://127.0.0.1:5000/autenticacao
 
 Melhorias a serem feitas
-    Implementar Extras (JWT)
+    Implementar Extra 2 (JWT) 
     Organizar em models
     Organizar os metodos (Post, Delete)
     Delete passando o ID via header
